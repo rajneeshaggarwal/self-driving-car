@@ -1,47 +1,37 @@
 #**Finding Lane Lines on the Road** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Finding Lane Lines on the Road**
-
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
 
 ---
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+###My pipeline consisted of following steps:
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+First, I converted the images to grayscale, 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+then I defined a kernel size and apply Gaussian smoothing,
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+then I defined thresold parameters (low and high) and applied Canny to the blurred image,
 
-![alt text][image1]
+then I defined the hough transform parameters and ran hough on edge detected image,
+
+then iterate over the output lines and drew lines on the image. In order to draw lines on the left and right lanes, I created a region of interest (a triangle) which allowed me to filter out lines which is not in my area of interest.
+
+Then I painted only on lines which were in area of interest.
 
 
 ###2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One potential shortcoming would be what would happen when the car is moving on the curved path. Since the area of interest is a triangle, it will not cater the need of curved path. 
 
-Another shortcoming could be ...
+Another shortcoming could be if the captured area is more than the supplied image size.
 
 
 ###3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to check if any line is intersecting the area of interest and then paint only the section of line coming in the area of interest.
 
-Another potential improvement could be to ...
+Another potential improvement could be to create area of interest on the fly based on type of path (curved or straight etc.)
