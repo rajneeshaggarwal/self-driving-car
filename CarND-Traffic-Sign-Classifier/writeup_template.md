@@ -30,9 +30,9 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-*2. Here is an exploratory visualization of the data set. 
+** Exploratory visualization of the data set 
 
-First of all, it pulls in random images and lables them with the correct names in reference with the CSV file to their respective ids.
+* I pulled in random images and labled them with the correct names in reference with the CSV file to their respective ids.
 
 ![alt text][image1]
 
