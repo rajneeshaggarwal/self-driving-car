@@ -34,7 +34,7 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 
 * I pulled in random images and labled them with the correct names in reference with the CSV file to their respective ids.
 
-![alt text][image1]
+[![Random Images](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/images/writeup_image1.png)]
 
 ###Design and Test a Model Architecture
 
