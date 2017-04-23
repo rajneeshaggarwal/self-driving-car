@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition**
+**Traffic Sign Recognition**
 
 ---
 
@@ -16,13 +16,13 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+**Writeup / README**
 
-####1. Here is a link to my [project code](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/Traffic_Sign_Classifier.ipynb)
+1. Here is a link to my [project code](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+**Data Set Summary & Exploration**
 
-####1. Here is a basic summary of my data set.
+* Here is a basic summary of my data set.
 
 I used the numpy library to calculate summary statistics of the traffic signs data set:
 
@@ -32,7 +32,7 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Here is an exploratory visualization of the data set. 
+*2. Here is an exploratory visualization of the data set. 
 
 First of all, it pulls in random images and lables them with the correct names in reference with the CSV file to their respective ids.
 
