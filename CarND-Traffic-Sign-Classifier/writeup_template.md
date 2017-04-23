@@ -108,9 +108,9 @@ I used Dropout in my architecture. Dropout is a super technique for regularizati
 
 Here are five German traffic signs that I found on the web:
 
-![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/B.png) ![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/C.png) ![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/D.png) 
-![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/E.png) ![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/F.png)
-![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/G.png)
+![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/B.png) ![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/C.png) ![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/D.jpg) 
+![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/E.jpg) ![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/F.png)
+![alt text](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/new_german_sign_images/G.jpg)
 
 The first image might be difficult to classify because ...
 
