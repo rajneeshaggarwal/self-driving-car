@@ -1,4 +1,4 @@
-**Traffic Sign Recognition**
+## **Traffic Sign Recognition**
 
 ---
 
@@ -22,9 +22,7 @@ The goals / steps of this project are the following:
 
 **Data Set Summary & Exploration**
 
-* Here is a basic summary of my data set.
-
-I used the numpy library to calculate summary statistics of the traffic signs data set:
+I used the numpy library to calculate summary statistics of the traffic signs data set. Here is a basic summary of my data set:
 
 * The size of training set is 34799
 * The size of the validation set is 12630
