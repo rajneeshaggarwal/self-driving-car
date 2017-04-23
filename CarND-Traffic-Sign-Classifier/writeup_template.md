@@ -36,6 +36,10 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 
 ![Random Images](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/images/writeup_image1.png)
 
+* Then, I plot the occurence of each image class to get an idea of how the data is distributed. Here is a bar graph depicting the same:
+
+![Image Classes - Data Distribution](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/images/writeup_image2.png)
+
 ###Design and Test a Model Architecture
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
