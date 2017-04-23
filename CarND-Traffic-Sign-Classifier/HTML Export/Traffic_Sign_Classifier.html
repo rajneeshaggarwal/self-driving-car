@@ -16435,12 +16435,12 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Print out the top five softmax probabilities for the predictions on the German traffic sign images found on the web. </span>
 <span class="c1">### Feel free to use as many code cells as needed.</span>
-<span class="n">k_size</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">k_size</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">softmax_logits</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
 <span class="n">predictions</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">softmax_logits</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k_size</span><span class="p">,</span> <span class="nb">sorted</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;top5&#39;</span><span class="p">)</span>
 
@@ -16480,17 +16480,23 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>TopKV2(values=array([[  1.00000000e+00,   5.03865612e-12,   8.33779661e-17],
-       [  1.00000000e+00,   6.96485022e-11,   3.47243306e-12],
-       [  1.00000000e+00,   0.00000000e+00,   0.00000000e+00],
-       [  9.60318744e-01,   1.28173027e-02,   1.13142189e-02],
-       [  9.99609411e-01,   3.62581806e-04,   2.34185918e-05],
-       [  9.75539804e-01,   2.44586617e-02,   5.77592971e-07]], dtype=float32), indices=array([[18, 26, 27],
-       [37, 35, 33],
-       [17,  0,  1],
-       [28, 29,  1],
-       [28,  1,  0],
-       [ 1,  0,  8]], dtype=int32))
+<pre>TopKV2(values=array([[  1.00000000e+00,   5.03865612e-12,   8.33779661e-17,
+          7.39377006e-21,   1.84696673e-22],
+       [  1.00000000e+00,   6.96485022e-11,   3.47243306e-12,
+          2.47048562e-12,   5.71196085e-13],
+       [  1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+          0.00000000e+00,   0.00000000e+00],
+       [  9.60318744e-01,   1.28173027e-02,   1.13142189e-02,
+          8.86808522e-03,   3.66448215e-03],
+       [  9.99609411e-01,   3.62581806e-04,   2.34185918e-05,
+          3.72416025e-06,   5.51261735e-07],
+       [  9.75539804e-01,   2.44586617e-02,   5.77592971e-07,
+          5.56590976e-07,   3.43704954e-07]], dtype=float32), indices=array([[18, 26, 27, 37,  1],
+       [37, 35, 33, 26, 40],
+       [17,  0,  1,  2,  3],
+       [28, 29,  1,  3, 36],
+       [28,  1,  0,  3, 29],
+       [ 1,  0,  8,  5,  6]], dtype=int32))
 </pre>
 </div>
 </div>
