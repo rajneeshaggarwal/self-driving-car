@@ -120,7 +120,7 @@ I first had to resize these images. Then I grayscaled and normalized these image
 
 Here are the results of the prediction:
 
-![Result](https://github.com/rajneeshnagarro/self-driving-car/blob/master/CarND-Traffic-Sign-Classifier/images/writeup_image5.png)
+When I look at the top 3 results, I see that my model predicts first three images with realy high probability. For the, fourth and fifth images my model is unsure or worse than first three. Since for the unsure images, there is no correct class in given classes, my model could not predict in top 3(these classes does not exist in the training data)
 
-The model was able to correctly guess 4 of the 6 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of images provided.
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares favorably to the accuracy on the test set of images provided.
 
