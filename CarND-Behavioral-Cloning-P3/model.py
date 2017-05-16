@@ -10,6 +10,7 @@ from keras.layers import Convolution2D, Conv2D
 from keras.optimizers import Adam
 from keras.utils import np_utils
 from keras.layers.normalization import BatchNormalization
+from keras.preprocessing.image import img_to_array, load_img
 
 images = []
 measurements = []
@@ -29,7 +30,10 @@ def randomise_image_brightness(image):
 def readImageData(source_path, steering_angle):
     filename = source_path.split('/')[-1]
     current_path = './data/IMG/' + filename
-    image = cv2.imread(current_path)
+    # image = cv2.imread(current_path)
+    image = load_img(current_path)
+    image = img_to_array(image)
+    
     image = randomise_image_brightness(image)
     position = filename.split('_')[0]
     if(position == 'left'):
