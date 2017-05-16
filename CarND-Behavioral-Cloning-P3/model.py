@@ -47,24 +47,23 @@ def readImageData(source_path, steering_angle):
 def get_model():
 
     model = Sequential()
-    model.add(Lambda(lambda x: x/127.5 - 1.,
-              input_shape=(h,w,c),
-              output_shape=(h,w,c)))
-    # model.add(Convolution2D(3, 1, 1, subsample=(1, 1), border_mode='same',
-    #                         init = 'he_normal'))
-    # model.add(BatchNormalization(mode=2))
-    # model.add(ELU())
+    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(h,w,c)))
+
     model.add(Convolution2D(16, 8, 8, subsample=(4, 4), border_mode="same"))
     model.add(BatchNormalization(mode=2))
     model.add(ELU())
+    
     model.add(Convolution2D(32, 5, 5, subsample=(2, 2), border_mode="same"))
     model.add(BatchNormalization(mode=2))
     model.add(ELU())
+    
     model.add(Convolution2D(64, 3, 3, subsample=(2, 2), border_mode="same"))
     model.add(Flatten())
+    
     model.add(Dropout(.2))
     model.add(BatchNormalization(mode=2))
     model.add(ELU())
+    
     model.add(Dense(512))
     model.add(Dropout(.5))
     model.add(BatchNormalization(mode=2))
@@ -83,40 +82,15 @@ def main():
             rows.append(row)
 
     for row in rows[2:]:
-        # source_path = row[0]
         steering_angle = float(row[3])
-        # cameras = ['left', 'center', 'right']
-        # choice = np.random.choice(cameras)
-        # if(choice == "center"):
         readImageData(row[0], steering_angle)
-        # elif(choice == "right"):
         readImageData(row[1], steering_angle)
-        # else:
         readImageData(row[2], steering_angle)
 
     print("Images Size: ", len(images))
     X_train = np.array(images)
     y_train = np.array(measurements)
 
-    # X_train = X_train / 127.5 - 0.5
-    # y_train = np_utils.to_categorical(y_train)
-
-    # model = Sequential()
-    # # model.add(Cropping2D(cropping=((50,20), (0,0)), input_shape=(160,320,3)))
-    # model.add(Convolution2D(32, 3, 3, input_shape=(32,64,3), output_shape=(32,64,3)))
-    # model.add(MaxPooling2D())
-    # model.add(Dropout(0.5))
-    # model.add(Convolution2D(32, 3, 3, activation='relu'))
-    # model.add(MaxPooling2D())
-    # model.add(Dropout(0.5))
-    # model.add(Flatten())
-    # model.add(Dense(128))
-    # model.add(Dense(64))
-    # model.add(Dense(1))
-    # print()
-    # print(model.summary())
-    #
-    # model.compile(loss='mse', optimizer='adam')
     model = get_model()
 
     model.fit(X_train, y_train, validation_split=0.1, shuffle=True, nb_epoch=int(sys.argv[1]))
