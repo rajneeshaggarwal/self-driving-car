@@ -38,31 +38,35 @@ def preprocessImage(image):
     return image
 
 def readImageData(source_path, steering_angle):
-    filename = source_path.split('/')[-1]
 
-    position = filename.split('_')[0]
-    if(position == 'left'):
-        steering_angle += 0.25
-    else:
-        steering_angle -= 0.25
+    if(steering_angle == 0):
+        ind_sterring_zero = np.random.randint(2)
+        if ind_sterring_zero==0:
+            filename = source_path.split('/')[-1]
 
-    current_path = './data/IMG/' + filename
-    # image = cv2.imread(current_path)
-    image = load_img(current_path)
-    image = img_to_array(image)
+            position = filename.split('_')[0]
+            if(position == 'left'):
+                steering_angle += 0.25
+            else:
+                steering_angle -= 0.25
 
-    image = randomise_image_brightness(image)
-    image = preprocessImage(image)
-    image = np.array(image)
-    images.append(image)
-    measurements.append(steering_angle)
+            current_path = './data/IMG/' + filename
+            # image = cv2.imread(current_path)
+            image = load_img(current_path)
+            image = img_to_array(image)
 
-    ind_flip = np.random.randint(2)
-    if ind_flip==0:
-        image = cv2.flip(image,1)
-        steering_angle = -steering_angle
-        images.append(image)
-        measurements.append(steering_angle)
+            image = randomise_image_brightness(image)
+            image = preprocessImage(image)
+            image = np.array(image)
+            images.append(image)
+            measurements.append(steering_angle)
+
+            ind_flip = np.random.randint(2)
+            if ind_flip==0:
+                image = cv2.flip(image,1)
+                steering_angle = -steering_angle
+                images.append(image)
+                measurements.append(steering_angle)
 
 def get_model():
 
